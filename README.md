@@ -35,4 +35,8 @@ Model Browser context menu item will add the selected item to the quantity list.
 ### Model Federation
 Load the PRC template file to create a product structure with nodes for Architecture and MEP.
 
+![Model Browser](./res/ModelBrowser.png)
+
 Select the node you want to import to and use.
+
+![RightClick](./res/RightClick.png)
