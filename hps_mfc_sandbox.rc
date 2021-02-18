@@ -1,0 +1,723 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+#include "verrsrc.h"
+
+#ifndef APSTUDIO_INVOKED
+#include "hps_mfc_sandbox.rc2"
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "#include ""verrsrc.h""\r\n"
+    "\r\n"
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""hps_mfc_sandbox.rc2""\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#include ""afxres.rc""      // Standard components\r\n"
+    "#if !defined(_AFXDLL)\r\n"
+    "#include ""afxprint.rc""        // printing/print preview resources\r\n"
+    "#include ""afxribbon.rc""        // MFC ribbon and control bar resources\r\n"
+    "#endif\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\ts3d.ico"
+
+IDR_hps_mfc_sandboxTYPE ICON                    "res\\hps_mfc_sandbox_Doc.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+
+IDR_MAINFRAME_256       BITMAP                  "res\\Toolbar256.bmp"
+
+IDB_FILELARGE           BITMAP                  "res\\filelarge.bmp"
+
+IDB_FILESMALL           BITMAP                  "res\\filesmall.bmp"
+
+IDB_WRITELARGE          BITMAP                  "res\\writelarge.bmp"
+
+IDB_WRITESMALL          BITMAP                  "res\\writesmall.bmp"
+
+IDB_BUTTONS             BITMAP                  "res\\buttons.bmp"
+
+IDB_OPERATORS_LARGE     BITMAP                  "res\\OperatorsLarge.bmp"
+
+IDB_OPERATORS_SMALL     BITMAP                  "res\\OperatorsSmall.bmp"
+
+IDB_SEGMENT_BROWSER     BITMAP                  "res\\SegmentBrowserIcons.bmp"
+
+IDB_MB_UNKNOWN          BITMAP                  "res\\img_unkn.bmp"
+
+IDB_MODEL_FILE          BITMAP                  "res\\il_class.bmp"
+
+IDB_PRODUCT_STRUCTURE_1 BITMAP                  "res\\dir_product.bmp"
+
+IDB_PRODUCT_STRUCTURE_2 BITMAP                  "res\\dir_product2.bmp"
+
+IDB_RI_SOLID            BITMAP                  "res\\img_solid.bmp"
+
+IDB_RI_SURFACE          BITMAP                  "res\\img_surf.bmp"
+
+IDB_RI_PLANE            BITMAP                  "res\\img_plan.bmp"
+
+IDB_RI_LINE             BITMAP                  "res\\img_line.bmp"
+
+IDB_RI_ARC              BITMAP                  "res\\img_arc.bmp"
+
+IDB_RI_COMP_CURVE       BITMAP                  "res\\img_compcurve.bmp"
+
+IDB_RI_CURVE            BITMAP                  "res\\img_curv.bmp"
+
+IDB_RI_POINT            BITMAP                  "res\\img_poin.bmp"
+
+IDB_RI_POINT_CLOUD      BITMAP                  "res\\img_points_cloud.bmp"
+
+IDB_RI_DIRECTION        BITMAP                  "res\\img_direction.bmp"
+
+IDB_RI_COORD_SYS        BITMAP                  "res\\img_axis.bmp"
+
+IDB_RI_GEOMETRY_SET     BITMAP                  "res\\dir_geom.bmp"
+
+IDB_VIEW                BITMAP                  "res\\pmiview_productview.bmp"
+
+IDB_ANNOTATION_VIEW     BITMAP                  "res\\cadview.bmp"
+
+IDB_VIEW_GROUP          BITMAP                  "res\\dir_mark.bmp"
+
+IDB_PMI_TEXT            BITMAP                  "res\\markup.bmp"
+
+IDB_PMI_TOLERANCE       BITMAP                  "res\\cadtoler.bmp"
+
+IDB_PMI_DIM_DISTANCE    BITMAP                  "res\\dim_distance.bmp"
+
+IDB_PMI_DIM_LENGTH      BITMAP                  "res\\dim_length.bmp"
+
+IDB_PMI_DIM_RADIUS      BITMAP                  "res\\dim_radius.bmp"
+
+IDB_PMI_DIM_DIAMETER    BITMAP                  "res\\dim_diameter.bmp"
+
+IDB_PMI_DIM_ANGLE       BITMAP                  "res\\dim_angle.bmp"
+
+IDB_PMI_DATUM           BITMAP                  "res\\cadrefer.bmp"
+
+IDB_PMI_DATUM_TARGET    BITMAP                  "res\\cadtarge.bmp"
+
+IDB_PMI_ROUGHNESS       BITMAP                  "res\\cadrough.bmp"
+
+IDB_PMI_CIRCLE_CENTER   BITMAP                  "res\\cadcirclecenter.bmp"
+
+IDB_PMI_LINE_WELDING    BITMAP                  "res\\cadlinewelding.bmp"
+
+IDB_PMI_SPOT_WELDING    BITMAP                  "res\\cadspotwelding.bmp"
+
+IDB_PMI_BALLOON         BITMAP                  "res\\cadballoon.bmp"
+
+IDB_PMI_COORDINATE      BITMAP                  "res\\dim_coordinate.bmp"
+
+IDB_PMI_FASTENER        BITMAP                  "res\\cadFastener.bmp"
+
+IDB_PMI_LOCATOR         BITMAP                  "res\\cadlocator.bmp"
+
+IDB_PMI_MEASUREMENT_POINT BITMAP                  "res\\cadmeasurementpoint.bmp"
+
+IDB_PMI_ARROW           BITMAP                  "res\\cadleaderarrow.bmp"
+
+IDB_PMI_TABLE           BITMAP                  "res\\cadtable.bmp"
+
+IDB_PMI_GROUP           BITMAP                  "res\\dir_mark.bmp"
+
+IDB_DRW_MODEL           BITMAP                  "res\\img_drawing_model.bmp"
+
+IDB_DRW_SHEET           BITMAP                  "res\\img_drawing_sheet.bmp"
+
+IDB_DRW_VIEW            BITMAP                  "res\\img_drawing_view.bmp"
+
+IDB_DRW_VIEW_BACK       BITMAP                  "res\\img_drawing_view_back.bmp"
+
+IDB_DRW_VIEW_BACKGROUND BITMAP                  "res\\img_drawing_view_background.bmp"
+
+IDB_DRW_VIEW_BOTTOM     BITMAP                  "res\\img_drawing_view_bottom.bmp"
+
+IDB_DRW_VIEW_DETAIL     BITMAP                  "res\\img_drawing_view_detail.bmp"
+
+IDB_DRW_VIEW_FRONT      BITMAP                  "res\\img_drawing_view_front.bmp"
+
+IDB_DRW_VIEW_ISO        BITMAP                  "res\\img_drawing_view_iso.bmp"
+
+IDB_DRW_VIEW_LEFT       BITMAP                  "res\\img_drawing_view_left.bmp"
+
+IDB_DRW_VIEW_RIGHT      BITMAP                  "res\\img_drawing_view_right.bmp"
+
+IDB_DRW_VIEW_SECTION    BITMAP                  "res\\img_drawing_view_section.bmp"
+
+IDB_DRW_VIEW_TOP        BITMAP                  "res\\img_drawing_view_top.bmp"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// PNG
+//
+
+IDB_MAIN                PNG                     "res\\main.png"
+
+IDB_LARGE_ICON          PNG                     "res\\LargeIcon.png"
+
+IDB_SMALL_ICON          PNG                     "res\\SmallIcon.png"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR 16, 15
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_FILE_PRINT
+    BUTTON      ID_APP_ABOUT
+END
+
+IDR_MAINFRAME_256 TOOLBAR 16, 15
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_FILE_PRINT
+    BUTTON      ID_APP_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        POPUP "&Application Look"
+        BEGIN
+            MENUITEM "Windows &2000",               ID_VIEW_APPLOOK_WIN_2000
+            MENUITEM "Office &XP",                  ID_VIEW_APPLOOK_OFF_XP
+            MENUITEM "&Windows XP",                 ID_VIEW_APPLOOK_WIN_XP
+            MENUITEM "Office 200&3",                ID_VIEW_APPLOOK_OFF_2003
+            MENUITEM "Visual Studio 200&5",         ID_VIEW_APPLOOK_VS_2005
+            MENUITEM "Visual Studio 200&8",         ID_VIEW_APPLOOK_VS_2008
+            POPUP "Office 200&7"
+            BEGIN
+                MENUITEM "&Blue Style",                 ID_VIEW_APPLOOK_OFF_2007_BLUE
+                MENUITEM "B&lack Style",                ID_VIEW_APPLOOK_OFF_2007_BLACK
+                MENUITEM "&Silver Style",               ID_VIEW_APPLOOK_OFF_2007_SILVER
+                MENUITEM "&Aqua Style",                 ID_VIEW_APPLOOK_OFF_2007_AQUA
+            END
+        END
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About hps_mfc_sandbox...",   ID_APP_ABOUT
+    END
+END
+
+IDR_POPUP_EDIT MENU
+BEGIN
+    POPUP "Edit"
+    BEGIN
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+    END
+END
+
+IDR_WINDOWS_MENU MENU
+BEGIN
+    MENUITEM "&New Window",                 ID_WINDOW_NEW
+END
+
+IDR_THEME_MENU MENU
+BEGIN
+    MENUITEM "Office 2007 (&Blue Style)",   ID_VIEW_APPLOOK_OFF_2007_BLUE
+    MENUITEM "Office 2007 (B&lack Style)",  ID_VIEW_APPLOOK_OFF_2007_BLACK
+    MENUITEM "Office 2007 (&Silver Style)", ID_VIEW_APPLOOK_OFF_2007_SILVER
+    MENUITEM "Office 2007 (&Aqua Style)",   ID_VIEW_APPLOOK_OFF_2007_AQUA
+    MENUITEM "Win&dows 7",                  ID_VIEW_APPLOOK_WINDOWS_7
+END
+
+IDR_MB_CONTEXT_MENU MENU
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "Isolate",                     ID_MB_CONTEXT_ISOLATE
+        MENUITEM "Show/Hide",                   ID_MB_CONTEXT_SHOW_HIDE
+        MENUITEM "Reset Visibility",            ID_MB_CONTEXT_RESET_VISIBILITY
+        MENUITEM "Add To BOM",                  ID_MB_CONTEXT_ADDTOBOM
+        MENUITEM "Merge Model",                 ID_MB_CONTEXT_ADDMODEL
+    END
+    POPUP "DWG Layer"
+    BEGIN
+        MENUITEM "Turn ON / Turn OFF",          ID_DWGLAYER_TOGGLE
+    END
+END
+
+IDR_SB_CONTEXT_MENU MENU
+BEGIN
+    POPUP "Segment Context Menu"
+    BEGIN
+        POPUP "Add Attribute"
+        BEGIN
+            MENUITEM "Material",                    ID_ADDATTRIBUTE_MATERIAL
+            MENUITEM "Camera",                      ID_ADDATTRIBUTE_CAMERA
+            MENUITEM "Modelling Matrix",            ID_ADDATTRIBUTE_MODELLINGMATRIX
+            MENUITEM "Texture Matrix",              ID_ADDATTRIBUTE_TEXTUREMATRIX
+            MENUITEM "Culling",                     ID_ADDATTRIBUTE_CULLING
+            MENUITEM "Curve Attribute",             ID_ADDATTRIBUTE_CURVEATTRIBUTE
+            MENUITEM "Cylinder Attribute",          ID_ADDATTRIBUTE_CYLINDERATTRIBUTE
+            MENUITEM "Edge Attribute",              ID_ADDATTRIBUTE_EDGEATTRIBUTE
+            MENUITEM "Lighting Attribute",          ID_ADDATTRIBUTE_LIGHTINGATTRIBUTE
+            MENUITEM "Line Attribute",              ID_ADDATTRIBUTE_LINEATTRIBUTE
+            MENUITEM "Marker Attribute",            ID_ADDATTRIBUTE_MARKERATTRIBUTE
+            MENUITEM "Surface Attribute",           ID_ADDATTRIBUTE_SURFACEATTRIBUTE
+            MENUITEM "Selectability",               ID_ADDATTRIBUTE_SELECTABILITY
+            MENUITEM "Sphere Attribute",            ID_ADDATTRIBUTE_SPHEREATTRIBUTE
+            MENUITEM "Subwindow",                   ID_ADDATTRIBUTE_SUBWINDOW
+            MENUITEM "Text Attribute",              ID_ADDATTRIBUTE_TEXTATTRIBUTE
+            MENUITEM "Transparency",                ID_ADDATTRIBUTE_TRANSPARENCY
+            MENUITEM "Visibility",                  ID_ADDATTRIBUTE_VISIBILITY
+            MENUITEM "Visual Effects",              ID_ADDATTRIBUTE_VISUALEFFECTS
+            MENUITEM "Performance",                 ID_ADDATTRIBUTE_PERFORMANCE
+            MENUITEM "Drawing Attribute",           ID_ADDATTRIBUTE_DRAWINGATTRIBUTE
+            MENUITEM "Hidden Line Attribute",       ID_ADDATTRIBUTE_HIDDENLINEATTRIBUTE
+            MENUITEM "Material Palette",            ID_ADDATTRIBUTE_MATERIALPALETTE
+            MENUITEM "Contour Line",                ID_ADDATTRIBUTE_CONTOURLINE
+            MENUITEM "Condition",                   ID_ADDATTRIBUTE_CONDITION
+            MENUITEM "Bounding",                    ID_ADDATTRIBUTE_BOUNDING
+            MENUITEM "Attribute Lock",              ID_ADDATTRIBUTE_ATTRIBUTELOCK
+            MENUITEM "Transform Mask",              ID_ADDATTRIBUTE_TRANSFORMMASK
+            MENUITEM "Color Interpolation",         ID_ADDATTRIBUTE_COLORINTERPOLATION
+            MENUITEM "Cutting Section Attribute",   ID_ADDATTRIBUTE_CUTTINGSECTIONATTRIBUTE
+            MENUITEM "Priority",                    ID_ADDATTRIBUTE_PRIORITY
+        END
+    END
+    POPUP "Attribute Context Menu"
+    BEGIN
+        MENUITEM "Unset",                       ID_ATTRIBUTECONTEXTMENU_UNSET
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE_AS,        VIRTKEY, CONTROL, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PROGRESS DIALOGEX 0, 0, 194, 47
+STYLE DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Loading ..."
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_PROGRESS_BAR,"msctls_progress32",WS_BORDER,7,6,180,14
+    PUSHBUTTON      "Cancel",IDC_BUTTON_CANCEL,72,26,50,14
+END
+
+IDD_PDF_EXPORT_DIALOG DIALOGEX 0, 0, 129, 66
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "PDF Export"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,9,46,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,71,46,50,14
+    CONTROL         "2D PDF",IDC_RADIO_2D,"Button",BS_AUTORADIOBUTTON,43,10,39,10
+    CONTROL         "3D PDF",IDC_RADIO_3D,"Button",BS_AUTORADIOBUTTON,43,27,39,10
+END
+
+IDD_EXCHANGE_IMPORT_DIALOG DIALOGEX 0, 0, 203, 170
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Cancel Import",IDCANCEL,92,142,95,14
+    CONTROL         "",IDC_PROGRESS_BAR,"msctls_progress32",PBS_SMOOTH | PBS_MARQUEE,15,16,171,14
+    EDITTEXT        IDC_EDIT_MESSAGES,15,51,171,82,ES_MULTILINE | ES_READONLY | WS_VSCROLL
+    CTEXT           "Static",IDC_IMPORT_MESSAGE,7,36,189,8
+    CONTROL         "Keep Dialog Open",IDC_CHECK_KEEP_OPEN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,145,73,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_PROGRESS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 186
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 40
+    END
+
+    IDD_PDF_EXPORT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 122
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 59
+    END
+
+    IDD_EXCHANGE_IMPORT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 196
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 163
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Ribbon
+//
+
+IDR_RIBBON              RT_RIBBON_XML           "res\\ribbon.mfcribbon-ms"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDP_OLE_INIT_FAILED     "OLE initialization failed.  Make sure that the OLE libraries are the correct version."
+END
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "HPS MFC Sandbox\n\nhps_mfc_sandbox\nHSF Files (*.hsf)\n.hsf\nhpsmfcsandbox.Document\nhps_mfc_sandbox.Document"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_APP_TITLE       "hps_mfc_sandbox"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+END
+
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE
+BEGIN
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle Status Bar"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STATUS_PANE1        "Pane 1"
+    IDS_STATUS_PANE2        "Pane 2"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_EDIT_MENU           "Edit"
+END
+
+STRINGTABLE
+BEGIN
+    ID_OPERATORS_ORBIT      "Allow orbitting around origin\nOrbit"
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United Kingdom) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DLG_QUANTITY DIALOGEX 0, 0, 414, 224
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_TOPMOST
+CAPTION "Quantities"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,347,193,50,14
+    CONTROL         "",IDC_LIST_QUANTITY,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_EDITLABELS | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,23,400,160
+    PUSHBUTTON      "Create Report",IDC_BTN_QUANTITY_REPORT,18,194,50,14
+    PUSHBUTTON      "Clear All",IDC_BTN_CLEARALL,84,194,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_DLG_QUANTITY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 407
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 217
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_DLG_QUANTITY AFX_DIALOG_LAYOUT
+BEGIN
+    0,
+    0, 0, 0, 0,
+    0, 0, 100, 0,
+    0, 0, 0, 0,
+    0, 0, 0, 0
+END
+
+#endif    // English (United Kingdom) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#include "afxres.rc"      // Standard components
+#if !defined(_AFXDLL)
+#include "afxprint.rc"        // printing/print preview resources
+#include "afxribbon.rc"        // MFC ribbon and control bar resources
+#endif
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

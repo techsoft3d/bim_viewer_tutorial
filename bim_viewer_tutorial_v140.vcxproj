@@ -1,0 +1,366 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E177FE26-CF56-4136-8F1E-9CB8AB230749}</ProjectGuid>
+    <RootNamespace>hps_mfc_sandbox_v140</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\..\bin\win32_v140d\</OutDir>
+    <IntDir>Debug_win32_v140\</IntDir>
+    <TargetName>hps_mfc_sandbox</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\..\bin\win64_v140d\</OutDir>
+    <IntDir>Debug_win64_v140\</IntDir>
+    <TargetName>hps_mfc_sandbox</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\..\bin\win32_v140\</OutDir>
+    <IntDir>Release_win32_v140\</IntDir>
+    <TargetName>hps_mfc_sandbox</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\..\bin\win64_v140\</OutDir>
+    <IntDir>Release_win64_v140\</IntDir>
+    <TargetName>hps_mfc_sandbox</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\include</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MinimalRebuild>false</MinimalRebuild>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\..\lib\win32_v140d</AdditionalLibraryDirectories>
+      <AdditionalDependencies>mfc140ud.lib;hps_core.lib;hps_sprk.lib;hps_sprk_ops.lib</AdditionalDependencies>
+      <DelayLoadDLLs>
+      </DelayLoadDLLs>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);.\res;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN64;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\include</AdditionalIncludeDirectories>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalOptions>/bigobj</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\..\lib\win64_v140d</AdditionalLibraryDirectories>
+      <AdditionalDependencies>mfc140ud.lib;hps_core.lib;hps_sprk.lib;hps_sprk_ops.lib</AdditionalDependencies>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);.\res;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\include</AdditionalIncludeDirectories>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>hps_core.lib;hps_sprk.lib;hps_sprk_ops.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\lib\win32_v140</AdditionalLibraryDirectories>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);.\res;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN64;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\include</AdditionalIncludeDirectories>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <FloatingPointModel>Fast</FloatingPointModel>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>hps_core.lib;hps_sprk.lib;hps_sprk_ops.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\lib\win64_v140</AdditionalLibraryDirectories>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);.\res;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="res\buttons.bmp" />
+    <None Include="res\filelarge.bmp" />
+    <None Include="res\filesmall.bmp" />
+    <None Include="res\hps_mfc_sandbox.rc2" />
+    <None Include="res\LargeIcon.png" />
+    <None Include="res\main.png" />
+    <None Include="res\OperatorsLarge.bmp" />
+    <None Include="res\OperatorsSmall.bmp" />
+    <None Include="res\SmallIcon.png" />
+    <None Include="res\ts3d.ico" />
+    <None Include="res\ribbon.mfcribbon-ms" />
+    <None Include="res\Toolbar.bmp" />
+    <None Include="res\Toolbar256.bmp" />
+    <None Include="res\writelarge.bmp" />
+    <None Include="res\writesmall.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BaseEdit.h" />
+    <ClInclude Include="CHPSConfigurationPane.h" />
+    <ClInclude Include="CHPSDoc.h" />
+    <ClInclude Include="CHPSFrame.h" />
+    <ClInclude Include="CHPSModelBrowserPane.h" />
+    <ClInclude Include="CHPSPropertiesPane.h" />
+    <ClInclude Include="CHPSSegmentBrowserPane.h" />
+    <ClInclude Include="CHPSView.h" />
+    <ClInclude Include="CHPSApp.h" />
+    <ClInclude Include="CProgressDialog.h" />
+    <ClInclude Include="FloatEdit.h" />
+    <ClInclude Include="HPSExchangeProgressDialog.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="SandboxHighlightOp.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="UIntEdit.h" />
+    <ClInclude Include="UIntRangeEdit.h" />
+    <ClInclude Include="UnitFloatEdit.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BaseEdit.cpp" />
+    <ClCompile Include="CHPSConfigurationPane.cpp" />
+    <ClCompile Include="CHPSDoc.cpp" />
+    <ClCompile Include="CHPSFrame.cpp" />
+    <ClCompile Include="CHPSModelBrowserPane.cpp" />
+    <ClCompile Include="CHPSPropertiesPane.cpp" />
+    <ClCompile Include="CHPSSegmentBrowserPane.cpp" />
+    <ClCompile Include="CHPSView.cpp" />
+    <ClCompile Include="CHPSApp.cpp" />
+    <ClCompile Include="CProgressDialog.cpp" />
+    <ClCompile Include="FloatEdit.cpp" />
+    <ClCompile Include="HPSExchangeProgressDialog.cpp" />
+    <ClCompile Include="SandboxHighlightOp.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="UIntEdit.cpp" />
+    <ClCompile Include="UIntRangeEdit.cpp" />
+    <ClCompile Include="UnitFloatEdit.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="hps_mfc_sandbox.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\cadballoon.bmp" />
+    <Image Include="res\cadcirclecenter.bmp" />
+    <Image Include="res\cadFastener.bmp" />
+    <Image Include="res\cadleaderarrow.bmp" />
+    <Image Include="res\cadlinewelding.bmp" />
+    <Image Include="res\cadlocator.bmp" />
+    <Image Include="res\cadmeasurementpoint.bmp" />
+    <Image Include="res\cadrefer.bmp" />
+    <Image Include="res\cadrough.bmp" />
+    <Image Include="res\cadspotwelding.bmp" />
+    <Image Include="res\cadtable.bmp" />
+    <Image Include="res\cadtarge.bmp" />
+    <Image Include="res\cadtoler.bmp" />
+    <Image Include="res\cadview.bmp" />
+    <Image Include="res\dim_angle.bmp" />
+    <Image Include="res\dim_coordinate.bmp" />
+    <Image Include="res\dim_diameter.bmp" />
+    <Image Include="res\dim_distance.bmp" />
+    <Image Include="res\dim_length.bmp" />
+    <Image Include="res\dim_radius.bmp" />
+    <Image Include="res\dir_geom.bmp" />
+    <Image Include="res\dir_mark.bmp" />
+    <Image Include="res\dir_product.bmp" />
+    <Image Include="res\dir_product2.bmp" />
+    <Image Include="res\hps_mfc_sandbox_Doc.ico" />
+    <Image Include="res\il_class.bmp" />
+    <Image Include="res\img_arc.bmp" />
+    <Image Include="res\img_axis.bmp" />
+    <Image Include="res\img_compcurve.bmp" />
+    <Image Include="res\img_curv.bmp" />
+    <Image Include="res\img_direction.bmp" />
+    <Image Include="res\img_drawing_model.bmp" />
+    <Image Include="res\img_drawing_sheet.bmp" />
+    <Image Include="res\img_drawing_view.bmp" />
+    <Image Include="res\img_drawing_view_back.bmp" />
+    <Image Include="res\img_drawing_view_background.bmp" />
+    <Image Include="res\img_drawing_view_bottom.bmp" />
+    <Image Include="res\img_drawing_view_detail.bmp" />
+    <Image Include="res\img_drawing_view_front.bmp" />
+    <Image Include="res\img_drawing_view_iso.bmp" />
+    <Image Include="res\img_drawing_view_left.bmp" />
+    <Image Include="res\img_drawing_view_right.bmp" />
+    <Image Include="res\img_drawing_view_section.bmp" />
+    <Image Include="res\img_drawing_view_top.bmp" />
+    <Image Include="res\img_line.bmp" />
+    <Image Include="res\img_plan.bmp" />
+    <Image Include="res\img_poin.bmp" />
+    <Image Include="res\img_points_cloud.bmp" />
+    <Image Include="res\img_solid.bmp" />
+    <Image Include="res\img_surf.bmp" />
+    <Image Include="res\img_unkn.bmp" />
+    <Image Include="res\markup.bmp" />
+    <Image Include="res\pmiview_productview.bmp" />
+    <Image Include="res\SegmentBrowserIcons.bmp" />
+    <Image Include="res\toolbar1.bmp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="hps_mfc_sandbox.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
