@@ -1,7 +1,7 @@
 # BIM Viewer
 A sample application built on top of the HOOPS Native Platform (HOOPS Exchange, Visualize and Publish) that loads IFC files into a win64 application and provides advanced data navigation like meta data display, quantity takeoff, floor sectioning, cutting planes, BOM creation, federated model combination and more. It is based on the mfc_sandbox sample project.
 
-[Hero Image](https://./res/Hero.png"Hero Image")
+![Hero Image](./res/Hero.png)
 
 This project shows the completed form of the BIM Tutorial from the HOOPS Native Platfrom.
 
