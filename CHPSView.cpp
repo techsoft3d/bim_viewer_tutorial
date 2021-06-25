@@ -9,15 +9,13 @@
 #include <WinUser.h>
 #include <sstream>
 #include <vector>
-#include "HExInterface.h"
-#include "HExCrossSection.h"
 #include "IFCSampleApp.h"
 #include "IFCSampleModel.h"
 #include "IFCSamplePlanView.h"
 #include "IFCSamplePreview.h"
 #include "IFCUtils.h"
  
-IFCSamplePlanView gblPlanView;  // temporary, move to bette rlocation
+IFCSamplePlanView gblPlanView;  // temporary, move to better location
 IFCSamplePreview  gblPreview;
 float             gblPlaneAdjust = 0;
 
@@ -1043,7 +1041,7 @@ void CHPSView::OnSetFocus(CWnd* /*pOldWnd*/)
 void CHPSView::OnUserCode1()
 {
 	// Toggle display of resource monitor using the DebuggingControl
-	//_displayResourceMonitor = !_displayResourceMonitor;
+	_displayResourceMonitor = !_displayResourceMonitor;
 	_canvas.GetWindowKey().GetDebuggingControl().SetResourceMonitor(_displayResourceMonitor);
 	
 }
@@ -1051,71 +1049,6 @@ void CHPSView::OnUserCode1()
 
 void CHPSView::OnUserCode2()
 {
-	HPS::CADModel cadModel = GetCHPSDoc()->GetCADModel();
-
-	HPS::SegmentKey viewKey = _canvas.GetFrontView().GetSegmentKey();
-
-	_canvas.GetFrontView().GetAxisTriadControl().SetVisibility(true);
-
-	BoundingKit bounding;
-
-	cadModel.GetModel().GetSegmentKey().ShowBounding( bounding);
-
-	SimpleSphere sphere;
-	SimpleCuboid cuboid;
-	bounding.ShowVolume( sphere,  cuboid);
-
-	float plane_offset_x = cuboid.min.x + ((cuboid.max.x - cuboid.min.x) / 2);
-	float plane_offset_y = cuboid.min.y + ((cuboid.max.y - cuboid.min.y) / 2);
-	float plane_offset_z = cuboid.min.z + ((cuboid.max.z - cuboid.min.z) / 2);
-
-	CuttingSectionKey cutting_section_key;
-	// cut edges enabled
-	viewKey.GetVisibilityControl().SetCutEdges(true);
-	viewKey.GetVisibilityControl().SetCutFaces(true);
-	viewKey.GetVisibilityControl().SetCutGeometry(true);
-
-	// cut edges set to red
-	viewKey.GetMaterialMappingControl().SetCutEdgeColor(HPS::RGBAColor(1, 0, 0));
-
-	// set the cutting depth for cutting section
-	viewKey.GetCuttingSectionAttributeControl()
-		.SetCappingLevel(HPS::CuttingSection::CappingLevel::Segment)
-		.SetCuttingLevel(HPS::CuttingSection::CuttingLevel::Global);
-
-
-	// cut plane is 0.42 units from the origin
-	HPS::Plane cutPlane(0, 0, 1, -plane_offset_z);
-
-#define HPS_CUTSECTION 
-#ifdef HPS_CUTSECTION
-	HPS::CuttingSectionKey cutterKey = viewKey.InsertCuttingSection(cutPlane);
-#else
-	HExCrossSection hexCrossSection;
-	hexCrossSection.Init();
-	hexCrossSection.SetModelFileFromCADFile(cadModel);
-	hexCrossSection.SetSectionPlaneFromPlane(cutPlane);
-
-	SegmentKey segCrossSection = cadModel.GetModel().GetSegmentKey().Subsegment("CrossSection");
-
-	hexCrossSection.SetCrossSectionSegment(segCrossSection);
-
-	hexCrossSection.ComputeCrossSection();
-	hexCrossSection.CreateVisualizeGeometry();
-
-	segCrossSection.GetVisibilityControl().SetLines(true);
-	segCrossSection.GetMaterialMappingControl().SetLineColor(RGBAColor(1, 0, 0));
-	segCrossSection.GetLineAttributeControl().SetWeight(3);
-	viewKey.GetVisibilityControl().SetFaces(false);
-
-	GetCanvas().Update();
-
-	return;
-#endif 
-	// set gather depth
-	
-
-	GetCanvas().Update();
 
 	
 }
@@ -1157,74 +1090,6 @@ void CHPSView::OnUserCode3()
 void CHPSView::OnUserCode4()
 {
 
-	HPS::View  view = _canvas.GetFrontView();
-	HPS::Model model = view.GetAttachedModel();
-	HPS::SegmentKey modelKey = model.GetSegmentKey();
-
-	HPS::SegmentKey capsKey = view.GetSegmentKey().Subsegment("caps");
-	capsKey = modelKey.Subsegment();
-
-
-	HPS::CutGeometryGatheringOptionsKit opt;
-	opt.SetLevel(CuttingSection::GatheringLevel::Segment);
-
-	// build path to window
-	HPS::KeyPath path;
-
-	//HPS::KeyArray keyArray(5);
-	//keyArray[0] = viewKey;
-	//keyArray[1] = _canvas.GetAttachedLayout().GetAttachedViewIncludeLink(0);
-	//keyArray[2] = _canvas.GetAttachedLayout().GetSegmentKey();
-	//keyArray[3] = _canvas.GetAttachedLayoutIncludeLink();
-	//keyArray[4] = _canvas.GetWindowKey();
-	//path.SetKeys(keyArray);
-
-	path.Append(_canvas.GetWindowKey());
-
-	// put cut geometry into subsegment called "caps"
-	size_t nCaps = path.GatherCutGeometry(capsKey, CutGeometryGatheringOptionsKit::GetDefault());
-
-
-
-	HPS::SegmentKeyArray out_children;
-	capsKey.ShowSubsegments(out_children);
-
-	HPS::SearchTypeArray typesToRemove;
-	typesToRemove.push_back(HPS::Search::Type::Line);
-	typesToRemove.push_back(HPS::Search::Type::Shell);
-
-	HPS::Search::Space in_search_space = HPS::Search::Space::SubsegmentsAndIncludes;
-	HPS::SearchResults  out_results;
-
-	size_t count = capsKey.Find(typesToRemove, in_search_space, out_results);
-
-	HPS::SearchResultsIterator iter = out_results.GetIterator();
-
-	while (iter.IsValid())
-	{
-		HPS::Key key = iter.GetItem();
-
-		if (key.Type() == HPS::Type::ShellKey)
-		{
-			// do something with this key
-		}
-
-		if (key.Type() == HPS::Type::LineKey)
-		{
-			HPS::PointArray pts;
-			HPS::LineKey lKey(key);
-			lKey.ShowPoints(pts);
-			int nPts = pts.size(); // <----- Polyline with 9 points for sample model
-		}
-
-		iter.Next();
-	}
-
-	int i = 10;
-
-	view.FitWorld();
-
-	_canvas.Update(); 
 }
 
 

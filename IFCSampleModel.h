@@ -27,7 +27,7 @@ public:
 
 	bool GetElevation(int iStorey, float &elevation);
 
-	int GetStoreyCount() { return _storeyElevations.size(); }
+	int GetStoreyCount() { return (int) _storeyElevations.size(); }
 
 	//
 	//  Get the elevaton of a storey and estimate its height based on the

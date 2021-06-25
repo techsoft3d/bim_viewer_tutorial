@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="CComponentQuantitiesDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseEdit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CHPSApp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CHPSComponentPropertiesPane.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CHPSConfigurationPane.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CHPSDoc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CHPSFrame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CHPSModelBrowserPane.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CHPSPropertiesPane.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CHPSSegmentBrowserPane.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CHPSView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CProgressDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FloatEdit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UnitFloatEdit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HPSExchangeProgressDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IFCQuantity.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IFCReportBuilder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IFCSampleApp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IFCSampleModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IFCSamplePlanView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IFCSamplePreview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IFCUtils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SandboxHighlightOp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UIntEdit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UIntRangeEdit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Resource.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CComponentQuantitiesDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseEdit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CHPSApp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CHPSComponentPropertiesPane.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CHPSConfigurationPane.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CHPSDoc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CHPSFrame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CHPSModelBrowserPane.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CHPSPropertiesPane.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CHPSSegmentBrowserPane.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CHPSView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CProgressDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FloatEdit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HPSExchangeProgressDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IFCQuantity.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IFCReportBuilder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IFCSampleApp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IFCSampleModel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IFCSamplePlanView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IFCSamplePreview.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IFCUtils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SandboxHighlightOp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UIntEdit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UIntRangeEdit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UnitFloatEdit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\cadballoon.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\cadcirclecenter.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\cadFastener.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\cadleaderarrow.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\cadlinewelding.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\cadlocator.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\cadmeasurementpoint.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\cadrefer.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\cadrough.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\cadspotwelding.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\cadtable.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\cadtarge.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\cadtoler.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\cadview.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\dim_angle.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\dim_coordinate.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\dim_diameter.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\dim_distance.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\dim_length.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\dim_radius.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\dir_geom.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\dir_mark.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\dir_product.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\dir_product2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\il_class.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\img_arc.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\img_axis.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\img_compcurve.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\img_curv.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\img_direction.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\img_drawing_model.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\img_drawing_sheet.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\img_drawing_view.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\img_drawing_view_back.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\img_drawing_view_background.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\img_drawing_view_bottom.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\img_drawing_view_detail.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\img_drawing_view_front.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\img_drawing_view_iso.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\img_drawing_view_left.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\img_drawing_view_right.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\img_drawing_view_section.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\img_drawing_view_top.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\img_line.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\img_plan.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\img_poin.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\img_points_cloud.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\img_solid.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\img_surf.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\img_unkn.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\markup.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\pmiview_productview.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\hps_mfc_sandbox_Doc.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\SegmentBrowserIcons.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\toolbar1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\buttons.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\filelarge.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\filesmall.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\LargeIcon.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\main.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\OperatorsLarge.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\OperatorsSmall.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\hps_mfc_sandbox.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\SmallIcon.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Toolbar.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Toolbar256.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ts3d.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\writesmall.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\writelarge.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ribbon.mfcribbon-ms">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{171a2d18-2ef0-4b85-8278-443a47bfdcf4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{05165ffb-bfeb-4ebc-95cc-337eae75f3c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{a99f34ff-b15d-411e-8d2a-f6bc7fd931a8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="hps_mfc_sandbox.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
