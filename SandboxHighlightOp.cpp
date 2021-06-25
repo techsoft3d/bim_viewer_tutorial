@@ -3,7 +3,6 @@
 #include "CHPSDoc.h"
 #include "CHPSView.h"
 #include "SandboxHighlightOp.h"
-#include "HExInterface.h"
 
 HPS::Selection::Level SandboxHighlightOperator::SelectionLevel = HPS::Selection::Level::Entity;
 

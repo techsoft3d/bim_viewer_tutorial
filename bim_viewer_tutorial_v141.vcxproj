@@ -27,7 +27,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{E177FE26-CF56-4136-8F1E-9CB8AB230749}</ProjectGuid>
+    <ProjectGuid>{779A3543-20D3-4EDD-839F-4B1893563CC0}</ProjectGuid>
     <RootNamespace>hps_mfc_sandbox_v141</RootNamespace>
     <Keyword>MFCProj</Keyword>
   </PropertyGroup>
@@ -360,7 +360,6 @@
     <None Include="res\writesmall.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\mfc_sandbox_aug13\HExInterface.h" />
     <ClInclude Include="BaseEdit.h" />
     <ClInclude Include="CComponentQuantitiesDlg.h" />
     <ClInclude Include="CHPSComponentPropertiesPane.h" />
@@ -374,8 +373,6 @@
     <ClInclude Include="CHPSApp.h" />
     <ClInclude Include="CProgressDialog.h" />
     <ClInclude Include="FloatEdit.h" />
-    <ClInclude Include="HExCrossSection.h" />
-    <ClInclude Include="HExInterface.h" />
     <ClInclude Include="HPSExchangeProgressDialog.h" />
     <ClInclude Include="IFCQuantity.h" />
     <ClInclude Include="IFCReportBuilder.h" />
@@ -406,10 +403,6 @@
     <ClCompile Include="CHPSApp.cpp" />
     <ClCompile Include="CProgressDialog.cpp" />
     <ClCompile Include="FloatEdit.cpp" />
-    <ClCompile Include="HExCrossSection.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DebugExchange|x64'">NotUsing</PrecompiledHeader>
-    </ClCompile>
     <ClCompile Include="HPSExchangeProgressDialog.cpp" />
     <ClCompile Include="IFCQuantity.cpp" />
     <ClCompile Include="IFCReportBuilder.cpp" />

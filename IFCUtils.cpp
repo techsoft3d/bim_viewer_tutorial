@@ -359,13 +359,13 @@ bool IFCUtils::MoveCameraToIFCSpace(HPS::ComponentPath componentPath, HPS::View 
 
 	HPS::CameraKit camKit;
 
-	float height = boundingCuboid.min.z + 1.5;
+	float height = boundingCuboid.min.z + 1.5f;
 	HPS::Component storeyComponent;
 	if (FindIFCStory(componentPath, storeyComponent))
 	{
 		float elevation;
 		if (IFCUtils::FindIFCStoryElevation(storeyComponent, elevation))
-			height = elevation + 1.5;
+			height = elevation + 1.5f;
 	}
 
 	HPS::Point spaceCenter(boundingSphere.center.x, boundingSphere.center.y, height);
