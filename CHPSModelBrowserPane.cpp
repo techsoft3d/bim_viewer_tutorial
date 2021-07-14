@@ -772,7 +772,7 @@ void ModelTreeCtrl::OnMbContextAddtoBOM()
 	AfxGetApp()->m_pMainWnd->PostMessageW(WM_MFC_SANDBOX_COMPONENT_QUANTIFY, 0, 0);
 }
 
-
+//! [OnMbContextAddmodel]
 void ModelTreeCtrl::OnMbContextAddmodel()
 {
 	HPS::ComponentPath mergePath = contextItem->GetPath();
@@ -782,3 +782,4 @@ void ModelTreeCtrl::OnMbContextAddmodel()
 	pDoc->GetCHPSView()->OnFileOpenAndMerge(mergePath);
 
 }
+//! [OnMbContextAddmodel]

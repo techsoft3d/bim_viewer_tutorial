@@ -6,6 +6,7 @@
 #include "sprk_exchange.h"
 #include "sprk_publish.h"
 
+//! [InitializeTable]
 IFCReportBuilder::IFCReportBuilder()
 {
 	_mpQuantity = 0;
@@ -13,10 +14,6 @@ IFCReportBuilder::IFCReportBuilder()
 	InitializeTable();
 }
 
-IFCReportBuilder::~IFCReportBuilder()
-{
-
-}
 void IFCReportBuilder::InitializeTable()
 {
 	_strTableStyle = "<style type=\"text/css\"> \
@@ -63,6 +60,9 @@ void IFCReportBuilder::InitializeTable()
 	_strTableBegin = "<table class=\"gridtable\"><tr> <th>Component Name</th> <th>Type</th> <th>Quantity</th> <th>Unit Cost</th><th>Total</th></tr>";
 	_strTableEnd = "</table>";
 }
+//! [InitializeTable]
+
+//! [table_contents]
 void IFCReportBuilder::InsertTableRow(IFCQuantityRecord & qr)
 {
 	std::stringstream ss;
@@ -91,7 +91,7 @@ void IFCReportBuilder::InsertTableTotal()
 
 	_strTableContent += ss.str();
 }
-
+//! [table_contents]
 
 void IFCReportBuilder::SetQuantities(IFCQuantity * pQuants)
 {
@@ -103,6 +103,7 @@ void IFCReportBuilder::SetCADModel(HPS::CADModel & cadModel)
 	_cadModel = cadModel;
 }
 
+//! [BuildReport]
 bool IFCReportBuilder::BuildReport( HPS::UTF8 & path)
 { 
 	if (0 == _mpQuantity)
@@ -121,11 +122,14 @@ bool IFCReportBuilder::BuildReport( HPS::UTF8 & path)
 
 	return true;
 }
+//! [BuildReport]
+
 void IFCReportBuilder::ClearAll()
 {
 	_mpQuantity->ClearAll();
 }
 
+//! [CreatePDF]
 void IFCReportBuilder::CreatePDF(std::string & strTable)
 {
 
@@ -137,28 +141,34 @@ void IFCReportBuilder::CreatePDF(std::string & strTable)
 	HPS::Publish::TableKit tableKit;
 	HPS::Publish::TextKit textKit;
 
+	//! [page_format]
 	pageKit.SetFormat(HPS::Publish::Page::Format::A4); // 595 x 842 pts
 	pageKit.SetOrientation(HPS::Publish::Page::Orientation::Portrait);
-
+	//! [page_format]
+	
 	//
 	// Add some header information
 	//
 
+	//! [text_label]
 	textKit.SetColor(RGBColor(0.25, 0.25, 0.25))
 		.SetFont(HPS::Publish::Text::Font::Name::Helvetica)
 		.SetSize(24)
 		.SetText("Dodgy Construction Company");
 	pageKit.AddText(textKit, IntRectangle(50, 350, 805, 830));
+	//! [text_label]
 
 	//
 	// Lets add the name of the model
 	//
+	//! [model_name]
 	std::string strModelName = "Model:" + _cadModel.GetName();
 	textKit.SetColor(RGBColor(0.25, 0.25, 0.25))
 		.SetFont(HPS::Publish::Text::Font::Name::Helvetica)
 		.SetSize(12)
 		.SetText(strModelName.c_str());
 	pageKit.AddText(textKit, IntRectangle(50, 350, 788, 800));
+	//! [model_name]
 
 	//
 	// Put in a logo image
@@ -175,31 +185,23 @@ void IFCReportBuilder::CreatePDF(std::string & strTable)
 	//
 	//  Content Max Height = 780
 	//
+	//! [insert_model]
 	annotationKit.SetSource(_cadModel);
 	annotationKit.SetPRCBRepCompression(Publish::PRC::BRepCompression::Medium); // set B-rep compression to Medium
 	annotationKit.SetPRCTessellationCompression(true);	// use tessellation compression
 	pageKit.SetAnnotation(annotationKit, IntRectangle(50, 562, 480, 780));
+	//! [insert_model]
 
-	//// add button to the page
-	//Publish::ButtonKit buttonKit;
-	//buttonKit.SetLabel("This is a page button")
-	//	.SetLabelPosition(Publish::Label::Position::OnTop)
-	//	.SetHighlighting(Publish::Highlighting::Mode::Push)
-	//	.SetVisibility(true)
-	//	.SetFont(Publish::Text::Font::Name::TimesRoman)
-	//	.SetFontSize(8)
-	//	.SetTextColor(RGBColor(0, 0, 0))
-	//	.SetFillColor(RGBColor(0.5f, 0.5f, 0.5f))
-	//	.SetName("execute_button"); // setting the name of the button is required!
-	//pageKit.AddButton(buttonKit, HPS::IntRectangle(0, 120, 400, 450));
 
 #define USE_SLIDE_TABLE
 #ifndef USE_SLIDE_TABLE
 
+	//! [add_table]
 	tableKit.SetHTML(strTable.c_str());     // specify HTML source
 	tableKit.SetHTMLStyle(_strTableStyle.c_str(), HPS::Publish::Source::Type::Code); // specify CSS source
 	pageKit.AddTable(tableKit, IntRectangle(50, 450, 50, 450));
-
+	//! [add_table]
+	
 #else 
 		HPS::Publish::SlideTableKit slide_table;
 		slide_table.SetHTML(strTable.c_str());     // specify HTML source
@@ -229,5 +231,11 @@ void IFCReportBuilder::CreatePDF(std::string & strTable)
 	}
 	myDocumentKey.Delete();
 #endif
+
+}
+//! [CreatePDF]
+
+IFCReportBuilder::~IFCReportBuilder()
+{
 
 }

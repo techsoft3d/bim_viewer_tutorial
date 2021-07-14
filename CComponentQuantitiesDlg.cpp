@@ -197,7 +197,7 @@ bool CHPSComponentQuantitiesDlg::AddComponent( HPS::Component *pComponent)
 	return false;
 }
 
-
+//! [OnBnClickedBtnQuantityReport]
 void CHPSComponentQuantitiesDlg::OnBnClickedBtnQuantityReport()
 {
 	CHPSDoc * pDoc = static_cast<CHPSDoc *>(static_cast<CFrameWnd *>(AfxGetApp()->m_pMainWnd)->GetActiveDocument());
@@ -229,8 +229,8 @@ void CHPSComponentQuantitiesDlg::OnBnClickedBtnQuantityReport()
 		CString msg(e.what());
 		MessageBox( _T("Exception Creating PDF"), msg, MB_ICONWARNING | MB_OK);
 	}
-
 }
+//! [OnBnClickedBtnQuantityReport]
 
 
 void CHPSComponentQuantitiesDlg::OnDestroy()

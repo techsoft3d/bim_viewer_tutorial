@@ -4,6 +4,7 @@ class IFCQuantity;
 #include <string>
 struct IFCQuantityRecord;
 
+//! [report_builder]
 class IFCReportBuilder
 {
 	IFCQuantity    *_mpQuantity;
@@ -31,4 +32,4 @@ public:
 	void ClearAll();
 
 };
-
+//! [report_builder]

@@ -19,7 +19,7 @@ IFCUtils::~IFCUtils()
 {
 }
 
-
+//! [get_units_string]
 UTF8 IFCUtils::GetUnitsString(HPS::CADModel cadModel)
 {
 	if (cadModel.GetComponentType() != HPS::Component::ComponentType::ExchangeModelFile)
@@ -51,8 +51,9 @@ UTF8 IFCUtils::GetUnitsString(HPS::CADModel cadModel)
 		// Just use the full name
 		return full;
 	}
-
 }
+//! [get_units_string]
+
 
 std::wstring IFCUtils::GetMetadataValueAsWString(HPS::Metadata const & metadata)
 {
@@ -83,7 +84,7 @@ std::wstring IFCUtils::GetMetadataValueAsWString(HPS::Metadata const & metadata)
 	return wss.str();
 }
 
-
+//! [GetComponentMetaData]
 void IFCUtils::GetComponentMetaData(HPS::Component component, std::vector< std::pair<UTF8, UTF8>>  &properties)
 {
 	HPS::MetadataArray mdArray = component.GetAllMetadata();
@@ -96,8 +97,11 @@ void IFCUtils::GetComponentMetaData(HPS::Component component, std::vector< std::
 		properties.push_back(pair);
 	}
 }
+//! [GetComponentMetaData]
 
- UTF8 IFCUtils::GetMetadataValueAsUTF8(HPS::Metadata const & metadata)
+
+//! [GetMetadataValueAsUTF8]
+UTF8 IFCUtils::GetMetadataValueAsUTF8(HPS::Metadata const & metadata)
 {
 	UTF8  rValue;
 	std::stringstream ss;
@@ -130,6 +134,7 @@ void IFCUtils::GetComponentMetaData(HPS::Component component, std::vector< std::
 	rValue = UTF8(ss.str().c_str());
 	return rValue;
 }
+//! [GetMetadataValueAsUTF8]
 
 
 bool IFCUtils::GetMetaDataType(HPS::Component component, UTF8 &valueString)
@@ -157,6 +162,8 @@ bool IFCUtils::GetMetaDataType(HPS::Component component, UTF8 &valueString)
 
 }
 
+
+//! [FindIFCStoreys]
 void  IFCUtils::FindIFCStoreys(HPS::Component component, HPS::ComponentArray &ancestorcomponents, IFCSampleModel *pIFCModel )
 {
 	//
@@ -204,9 +211,11 @@ void  IFCUtils::FindIFCStoreys(HPS::Component component, HPS::ComponentArray &an
 	}
 
 	ancestorcomponents.pop_back();
-
 }
+//! [FindIFCStoreys]
 
+
+//! [SortIFCStoreysByElevation]
 void IFCUtils::SortIFCStoreysByElevation(IFCSampleModel * pIFCModel)
 {
 	if (NULL == pIFCModel)
@@ -234,6 +243,7 @@ void IFCUtils::SortIFCStoreysByElevation(IFCSampleModel * pIFCModel)
 		 index++;
 	 }
 }
+//! [SortIFCStoreysByElevation]
 
 
 void  IFCUtils::FindIFCComponentByTypeAndName(Component component, UTF8 &strType, UTF8 &strName, HPS::ComponentArray &ancestorcomponents, HPS::ComponentPathArray &componentPaths)

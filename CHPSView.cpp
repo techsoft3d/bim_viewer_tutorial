@@ -1040,13 +1040,36 @@ void CHPSView::OnSetFocus(CWnd* /*pOldWnd*/)
 	_capsLockState = IsCapsLockOn();
 }
 
+//! [show_properties]
 void CHPSView::OnUserCode1()
 {
-	// Toggle display of resource monitor using the DebuggingControl
-	//_displayResourceMonitor = !_displayResourceMonitor;
-	_canvas.GetWindowKey().GetDebuggingControl().SetResourceMonitor(_displayResourceMonitor);
-	
+	HPS::View  view = _canvas.GetFrontView();
+	HPS::Model model = view.GetAttachedModel();
+	HPS::SegmentKey modelKey = model.GetSegmentKey();
+	HPS::CADModel cadModel = GetCHPSDoc()->GetCADModel();
+
+	if (!cadModel.Empty())
+	{
+		UTF8 unitsString = IFCUtils::GetUnitsString(cadModel);
+
+		HPS::UTF8  utf8Name = cadModel.GetName();
+		CString cName(utf8Name.GetBytes());
+
+		MessageBox(CString("Units: ") + unitsString.GetBytes(), CString("Model File:") + cName);
+		
+		std::vector < std::pair<UTF8, UTF8>>  wsMetaData;
+		IFCUtils::GetComponentMetaData(cadModel, wsMetaData);
+
+		UTF8 allProps;
+
+		for (auto const &wsd : wsMetaData)
+		{
+			allProps += wsd.first + ":" + wsd.second + "\n";
+		}
+		MessageBox(CString(allProps.GetBytes()), CString("Model File") + cName);		
+	}
 }
+//! [show_properties]
 
 
 void CHPSView::OnUserCode2()
@@ -1228,42 +1251,38 @@ void CHPSView::OnUserCode4()
 }
 
 
-
-
 IFCSamplePreview * CHPSView::GetPreviewWindow()
 {
 	return &gblPreview;
 }
 
 
-void ifcPopulateFloorsDropDown(CMFCRibbonComboBox *pCombo, IFCSampleModel *pIFCModel )
+//! [ifcPopulateFloorsDropDown]
+void ifcPopulateFloorsDropDown(CMFCRibbonComboBox *pCombo, IFCSampleModel *pIFCModel)
 {
-	
 	// The first entry will be to show the entire model
-
 	pCombo->AddItem(CString("All"),NULL);
 	pCombo->SelectItem(0);
-
+ 
 	// now add an entry for each
 	int index = 0;
 	for (auto path : pIFCModel->_storeyPaths)
 	{
 		//lets get the name of the component
 		float elevation = pIFCModel->_storeyElevations[index];
-
+ 
 		Component front = path.Front();
-		
-
+ 		
 		HPS::UTF8 strFrontName = front.GetName();
 		CString csName(strFrontName.GetBytes());
-
+ 
 		CString csValue;
 		csValue.Format(_T("- %f"),  elevation);
-			
+ 			
 		pCombo->AddItem(csName + csValue, index++);
-
 	}
 }
+//! [ifcPopulateFloorsDropDown]
 
 void CHPSView::OnLoadedIFCFile( CHPSDoc *pDoc, BOOL mergedFile )
 {
@@ -1273,12 +1292,10 @@ void CHPSView::OnLoadedIFCFile( CHPSDoc *pDoc, BOOL mergedFile )
 		return;
 
 	//! [on_loaded_ifc_file]
-
 	HPS::Component::ComponentType cType = cadModel.GetComponentType();
-	ComponentArray      ancestorcomponents;
-
+	ComponentArray ancestorcomponents;
+ 
 	// only update the floors for the first model loaded
-
 	IFCSampleModel * pIFCModel = pDoc->GetIFCSampleModel();
 	if (mergedFile)
 	{
@@ -1288,82 +1305,78 @@ void CHPSView::OnLoadedIFCFile( CHPSDoc *pDoc, BOOL mergedFile )
 	}
 	else
 		pIFCModel->ResetMergeCount();
-
+ 
 	pIFCModel->Reset();
-
+ 
 	IFCUtils::FindIFCStoreys(cadModel, ancestorcomponents, pIFCModel );
-
-	 IFCUtils::SortIFCStoreysByElevation(pIFCModel);
-
+ 
+    IFCUtils::SortIFCStoreysByElevation(pIFCModel);
+ 
 	//
 	// now populate the dropdown
 	//
 	CHPSFrame * pFrame = (CHPSFrame*)AfxGetMainWnd();
 	CMFCRibbonComboBox *pCombo = DYNAMIC_DOWNCAST(CMFCRibbonComboBox, pFrame->m_wndRibbonBar.FindByID(ID_COMBO_FLOOR));
-
+ 
 	pCombo->RemoveAllItems();
-
+ 
 	ifcPopulateFloorsDropDown(pCombo, pIFCModel);
-
 	//! [on_loaded_ifc_file]
-
 }
 
-//! [on_combo_floor]
+//! [OnComboFloor]
 void CHPSView::OnComboFloor()
 {
 	CHPSFrame * pFrame = (CHPSFrame*)AfxGetMainWnd();
 	CMFCRibbonComboBox *pCombo = DYNAMIC_DOWNCAST(CMFCRibbonComboBox, pFrame->m_wndRibbonBar.FindByID(ID_COMBO_FLOOR));
-
+ 
 	int selectionIndex = pCombo->GetCurSel();
-
+ 
 	IFCSampleModel *pIFCModel = GetCHPSDoc()->GetIFCSampleModel();
 	int storeyIndex = selectionIndex - 1;
 	pIFCModel->SetCurrentStorey(storeyIndex);
-
-
+ 
+ 
 	if (storeyIndex < 0 )
 	{
 		HPS::CADModel cadModel = GetCHPSDoc()->GetCADModel();
 		cadModel.ResetVisibility(_canvas);
-
+ 
 		HPS::SegmentKey mainCutplaneKey = cadModel.GetModel().GetSegmentKey().Subsegment("Cutplane");
 		mainCutplaneKey.Flush();
 	}
 	else
 	{
-		// show the selected floor
-		//pIFCModel->_storeyPaths[pathIndex].Isolate(_canvas);
-
 		float elevation, height;
 		pIFCModel->GetElevationAndHeight(storeyIndex, elevation,height);
-
+ 
 		if (height < 0.01)
 			height = 0.5;
-
+ 
 		HPS::CADModel cadModel = GetCHPSDoc()->GetCADModel();
 		cadModel.ResetVisibility(_canvas);
-
+ 
 		HPS::SegmentKey mainCutplaneKey = cadModel.GetModel().GetSegmentKey().Subsegment("Cutplane");
 		mainCutplaneKey.Flush();
-
+ 
+		//! [InsertCuttingSection]
 		HPS::CuttingSectionKit cutKit;
-
 		HPS::Plane cutPlane;
-
+  
 		cutPlane.a = 0;
 		cutPlane.b = 0;
 		cutPlane.c = 1;
 		cutPlane.d = -(elevation + height *.75);
 		cutKit.SetPlanes(cutPlane);
 		cutKit.SetVisualization(HPS::CuttingSection::Mode::None, RGBAColor(0.7f, 0.7f, 0.7f, 0.15f), 1);
-
+ 
 		mainCutplaneKey.InsertCuttingSection(cutKit);
+		//! [InsertCuttingSection]
 
 	}
 	_canvas.Update();
 }
-//! [on_combo_floor]
+//! [OnComboFloor]
 
 void CHPSView::OnCheckCompProps()
 {
@@ -1462,6 +1475,7 @@ void CHPSView::OnUpdateCheckPreview(CCmdUI *pCmdUI)
 	pCmdUI->SetCheck(pSampleApp->GetShowPreviewView());
 }
 
+//! [OnFileOpenAndMerge]
 void CHPSView::OnFileOpenAndMerge(HPS::ComponentPath mergePath)
 {
 	CString filter = _T("");
@@ -1515,3 +1529,4 @@ void CHPSView::OnFileOpenAndMerge(HPS::ComponentPath mergePath)
 		GetDocument()->OnMergeExchangeModel(dlg.GetPathName(), mergePath );
 	}
 }
+//! [OnFileOpenAndMerge]

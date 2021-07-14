@@ -23,43 +23,45 @@ bool IFCSamplePlanView::CreatePlanView(HPS::Canvas canvas, HPS::CADModel cadMode
 	HPS::SegmentKey viewKey = _canvas.GetFrontView().GetSegmentKey();
 	HPS::SegmentKey modelKey = cadModel.GetModel().GetSegmentKey();
 
-
+	//! [subwindow]
 	_planviewKey = viewKey.Subsegment("planView", true);
 	_locationKey = _planviewKey.Subsegment("cameraLocation", true);
-
+ 
 	 _contentKey = _planviewKey.Subsegment("content", true);
 	_contentKey.IncludeSegment(modelKey);
-
+ 
 	HPS::SubwindowKit subwindowKit;
 	subwindowKit.SetSubwindow(HPS::Rectangle(-1, -0.5f, -1, -0.25), HPS::Subwindow::Type::Standard);
 	subwindowKit.SetBorder(HPS::Subwindow::Border::None);
 	subwindowKit.SetBackground(HPS::Subwindow::Background::Transparent);
 	_planviewKey.SetSubwindow(subwindowKit);
 	_planviewKey.InsertDistantLight(HPS::Vector(0.5f, 0.5f, 0.5f));
+	//! [subwindow]
 
+	//! [bounding]
 	HPS::KeyPath keyPath;
 	keyPath.PushBack(modelKey);
 	HPS::BoundingKit bound;
 	keyPath.ShowNetBounding(bound);
 	HPS::SimpleSphere boundingSphere;
 	HPS::SimpleCuboid boundingCuboid;
-
+ 
 	bound.ShowVolume(boundingSphere, boundingCuboid);
-
+ 
 	float cx = (boundingCuboid.min.x + boundingCuboid.max.x) / 2;
 	float cy = (boundingCuboid.min.y + boundingCuboid.max.y) / 2;
 	float cz = (boundingCuboid.min.z + boundingCuboid.max.z) / 2;
-
+ 
 	float scale = 1.05;
 	float dx = (boundingCuboid.max.x - boundingCuboid.min.x)  * scale;
 	float dy = (boundingCuboid.max.y - boundingCuboid.min.y) *  scale;
 	float dz = (boundingCuboid.max.z - boundingCuboid.min.z) *  scale;
-
+ 
 	float delta = fmax(dx, dy); // we want a square 
-
+ 
 	HPS::Point camCenter(cx, cy, cz);
 	HPS::Point camPos(cx, cy, cz + 1);
-
+ 
 	HPS::CameraKit camKit;
 	camKit.SetTarget(camCenter);
 	camKit.SetPosition(camPos);
@@ -67,6 +69,7 @@ bool IFCSamplePlanView::CreatePlanView(HPS::Canvas canvas, HPS::CADModel cadMode
 	camKit.SetUpVector(HPS::Vector(0, 1, 0));
 	camKit.SetProjection(HPS::Camera::Projection::Orthographic);
 	_planviewKey.SetCamera(camKit);
+	//! [bounding]
 
 
 	_locationKey.InsertSphere(HPS::Point(0, 0, boundingCuboid.max.z), boundingSphere.radius / 10);

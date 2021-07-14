@@ -214,7 +214,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN64;_WINDOWS;_DEBUG;USING_EXCHANGE;USING_PUBLISH;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\include;$(HEXCHANGE_INSTALL_DIR)\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\dev\packages\HOOPS_Visualize_2020_Win_v141\HOOPS_Visualize_2020\samples\mfc_sandbox;C:\dev\packages\HOOPS_Visualize_2020_Win_v141\HOOPS_Visualize_2020\include;$(HEXCHANGE_INSTALL_DIR)\include</AdditionalIncludeDirectories>
       <FunctionLevelLinking>false</FunctionLevelLinking>
       <FloatingPointModel>Fast</FloatingPointModel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -223,7 +223,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>..\..\lib\win64_v141d</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\dev\packages\HOOPS_Visualize_2020_Win_v141\HOOPS_Visualize_2020\lib\win64_v141d;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>mfc140ud.lib;hps_core.lib;hps_sprk.lib;hps_sprk_ops.lib;hps_sprk_exchange.lib;hps_sprk_publish.lib</AdditionalDependencies>
     </Link>
     <Midl>

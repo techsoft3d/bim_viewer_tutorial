@@ -160,6 +160,7 @@ BOOL CHPSDoc::OnOpenDocument(LPCTSTR lpszPathName)
 	return TRUE;
 }
 
+//! [OnMergeExchangeModel]
 BOOL CHPSDoc::OnMergeExchangeModel(LPCTSTR lpszPathName, HPS::ComponentPath mergePath)
 {
 	CStringA ansiPath(lpszPathName);
@@ -199,6 +200,7 @@ BOOL CHPSDoc::OnMergeExchangeModel(LPCTSTR lpszPathName, HPS::ComponentPath merg
 
 	return TRUE;
 }
+//! [OnMergeExchangeModel]
 
 namespace
 {
@@ -464,15 +466,20 @@ bool CHPSDoc::ImportExchangeFile(LPCTSTR lpszPathName, HPS::Exchange::ImportOpti
 
 	try
 	{
+		//! [import_options]
 		HPS::Exchange::ImportOptionsKit ioOpts = options;
 		ioOpts.SetBRepMode(HPS::Exchange::BRepMode::BRepAndTessellation);
 		ioOpts.SetIFCMetadata(true);
 		ioOpts.SetAttributes(true);
 		ioOpts.SetIFCOwnerHistoryOptimization(false);
+		//! [import_options]
 
+		//! [import_file]
+		// get the filename and the file format
 		HPS::UTF8 filename(lpszPathName);
 		HPS::Exchange::File::Format format = HPS::Exchange::File::GetFormat(filename);
 
+		// special case for CATIA V4 files
 		HPS::UTF8Array selectedConfig;
 		HPS::Exchange::ConfigurationArray configs;
 		if (format == HPS::Exchange::File::Format::CATIAV4
@@ -485,9 +492,12 @@ bool CHPSDoc::ImportExchangeFile(LPCTSTR lpszPathName, HPS::Exchange::ImportOpti
 			ioOpts.SetConfiguration(selectedConfig);
 		}
 
+		// a progress dialog is created 
 		CHPSExchangeProgressDialog dlg(this, notifier, filename);
 
+		// here is where the model file is read
 		notifier = HPS::Exchange::File::Import(filename, ioOpts);
+		//! [import_file]
 
 		dlg.DoModal();
 		success = dlg.WasImportSuccessful();
@@ -516,6 +526,7 @@ bool CHPSDoc::ImportExchangeFile(LPCTSTR lpszPathName, HPS::Exchange::ImportOpti
 	return success;
 }
 
+//! [MergeExchangeFile]
 bool CHPSDoc::MergeExchangeFile(LPCTSTR lpszPathName, HPS::Exchange::ImportOptionsKit const & options)
 {
 	bool success = false;
@@ -573,6 +584,7 @@ bool CHPSDoc::MergeExchangeFile(LPCTSTR lpszPathName, HPS::Exchange::ImportOptio
 
 	return success;
 }
+//! [MergeExchangeFile]
 #endif
 
 #ifdef USING_PARASOLID
